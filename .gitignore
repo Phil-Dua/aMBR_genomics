@@ -1,0 +1,11 @@
+# Operating system
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Secrets and local credentials
+.env
+.env.*
+*.pem
+credentials.json
+client_secret*.json

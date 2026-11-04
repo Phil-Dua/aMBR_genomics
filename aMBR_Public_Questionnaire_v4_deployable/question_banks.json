@@ -1,0 +1,271 @@
+{
+  "version": "4.0-public-self-service",
+  "banks": {
+    "patient": {
+      "label": "Patient or person with a cancer-related screening experience",
+      "intro": "Tell us about your experience navigating screening, surveillance, or diagnostic evaluation. You do not need to tell us your diagnosis or medical history.",
+      "qs": [
+        "Think of a recent cancer screening or evaluation decision. What led you to consider it?",
+        "How did you decide what to do, and what sources of advice did you trust?",
+        "What was the process like from arranging an appointment to receiving information or results?",
+        "What part of the experience was most inconvenient, uncertain, confusing, or difficult?",
+        "If any further evaluation was discussed, what made the next steps easier or harder to understand?",
+        "How did practical considerations such as time, cost, travel, or insurance influence your choices?",
+        "What information or support would have made that experience better?",
+        "What should people designing a future cancer-detection test understand about patients’ needs?"
+      ]
+    },
+    "caregiver": {
+      "label": "Family caregiver or support person",
+      "intro": "Please share your experience supporting someone, without naming them or providing identifiable health details.",
+      "qs": [
+        "Think of a time you supported someone through cancer screening or evaluation. What role did you play?",
+        "What did the person need the most help understanding or arranging?",
+        "Which parts of scheduling, waiting, results, or follow-up were hardest to navigate?",
+        "How did the care team explain results and what might happen next?",
+        "What practical burdens did you notice, such as travel, work, costs, or coordination?",
+        "What support, information, or resources would have helped?",
+        "Who was responsible for arranging follow-up, and did that process work?",
+        "What should people creating new screening or detection services learn from caregivers?"
+      ]
+    },
+    "public": {
+      "label": "General public / person without a specific professional role",
+      "intro": "You can answer from your general experience or expectations; no cancer experience is necessary.",
+      "qs": [
+        "How do you usually learn about recommended health screening tests?",
+        "What information do you look for before deciding whether to consider a new health test?",
+        "What would make you trust or question information about a cancer-related test?",
+        "What practical barriers might make a screening appointment difficult to complete?",
+        "What would you want to know about the chance of unclear or incorrect results?",
+        "Who would you expect to explain an abnormal result and help arrange further evaluation?",
+        "How might out-of-pocket costs or insurance coverage affect your decision?",
+        "What else should developers understand about public experiences with screening?"
+      ]
+    },
+    "primary_care": {
+      "label": "Primary care MD / DO / NP / PA",
+      "intro": "We are interested in real clinical decision pathways and recent examples, not endorsements.",
+      "qs": [
+        "How do you currently decide which cancer screening or risk-evaluation options to discuss?",
+        "Can you describe a recent situation where current options did not fully address a patient need (without identifiers)?",
+        "What made that situation challenging, and how did you respond?",
+        "How did your team evaluate the last new screening or diagnostic test you considered adopting?",
+        "What evidence, guidance, or institutional approvals influenced that decision?",
+        "Who currently owns follow-up when a result is uncertain or abnormal?",
+        "What result-report information or referral access is needed to act appropriately?",
+        "How do coverage, cost, appointment time, and specialist access affect ordering decisions?"
+      ]
+    },
+    "specialist": {
+      "label": "Specialist physician (oncology, gastroenterology, surgery, radiology, etc.)",
+      "intro": "Please describe processes and anonymized examples from your practice.",
+      "qs": [
+        "Which patient populations in your practice have the greatest unmet needs in earlier cancer detection or evaluation?",
+        "Can you describe a recent example that revealed a limitation of the current pathway?",
+        "What diagnostic tools were used, and what information was missing or delayed?",
+        "Which abnormal results have clear next steps, and which lead to diagnostic uncertainty?",
+        "How do you judge whether a biomarker adds clinical value beyond available tests?",
+        "What evidence would you require before changing clinical management?",
+        "What follow-up imaging, endoscopy, or other evaluation could your team realistically support?",
+        "What would make a limited pilot meaningful, and what would make it inappropriate?"
+      ]
+    },
+    "genetic": {
+      "label": "Genetic counselor / hereditary cancer program",
+      "intro": "Distinguish inherited susceptibility testing from tests intended to detect possible current disease.",
+      "qs": [
+        "How do patients typically enter risk assessment and surveillance programs?",
+        "What information determines current surveillance recommendations?",
+        "Where do patients continue to experience unmet needs despite existing options?",
+        "What kinds of uncertain results are most difficult to explain?",
+        "How do you explain inherited cancer risk versus a signal suggesting cancer might currently be present?",
+        "What processes address conflicting, uncertain, or abnormal findings?",
+        "What evidence would be needed before discussing an additional detection test with patients?",
+        "What counseling materials, communication channels, and referrals would need to accompany it?"
+      ]
+    },
+    "nurse": {
+      "label": "Nurse / nurse navigator / referral or program coordinator",
+      "intro": "Please focus on how work actually gets done across care teams.",
+      "qs": [
+        "What usually happens after a patient has an abnormal cancer-related result?",
+        "Who contacts the patient, schedules the next steps, and tracks completion?",
+        "Where do people most often encounter delays or become lost to follow-up?",
+        "Which patient questions and concerns consume the most time?",
+        "How do transportation, insurance, language, or work obligations affect follow-up?",
+        "What happens when follow-up does not resolve the uncertainty?",
+        "How much staff coordination does a typical abnormal result require?",
+        "What would need to change before your team could handle additional test-related referrals?"
+      ]
+    },
+    "scientist": {
+      "label": "Scientist / PhD researcher / translational investigator",
+      "intro": "Tell us how you evaluate evidence and translational relevance.",
+      "qs": [
+        "What cancer detection or risk-stratification problem do current research approaches address least well?",
+        "Which clinical populations should be studied separately, and why?",
+        "How would you evaluate a new biomarker against existing alternatives?",
+        "What analytical performance, biological controls, and confounders would be especially important?",
+        "Which benign or precursor conditions should be represented in validation cohorts?",
+        "What evidence would distinguish biological plausibility from clinical usefulness?",
+        "Which study-design mistakes most often limit translational adoption?",
+        "Who else should inform the choice of first clinical use case?"
+      ]
+    },
+    "laboratory": {
+      "label": "Clinical laboratory director / molecular pathology / lab operations",
+      "intro": "Tell us about laboratory validation and operational requirements.",
+      "qs": [
+        "What prompted the most recent outside assay your organization implemented?",
+        "Who participated in evaluating its analytical and clinical validation?",
+        "What specimen collection, storage, handling, or transport challenges arise most often?",
+        "How are unsuccessful assays or unsuitable samples handled?",
+        "What turnaround time is clinically useful for the decisions the test would inform?",
+        "What result reporting, LIS, or EHR integration requirements apply?",
+        "How do you choose between a send-out test and an in-house assay?",
+        "Which technical or regulatory concerns could prevent a pilot?"
+      ]
+    },
+    "finance": {
+      "label": "Health system finance / procurement / service-line budget leader",
+      "intro": "We want to understand real purchasing and billing arrangements, without presuming who pays.",
+      "qs": [
+        "Can you walk us through a recent decision to contract for a diagnostic test?",
+        "Who owned the budget and who authorized spending?",
+        "What clinical sponsorship and financial evidence were required?",
+        "How are comparable tests billed to hospitals, insurers, or patients?",
+        "Who absorbs denied claims and downstream follow-up costs?",
+        "Which costs beyond the test itself influence a decision?",
+        "What would a pilot need to show before broader procurement?",
+        "What contracting steps and timelines should a new vendor anticipate?"
+      ]
+    },
+    "administrator": {
+      "label": "Health system administrator / population health / clinical program leader",
+      "intro": "We are asking about program adoption, patient access, and operational capacity.",
+      "qs": [
+        "What are the highest-priority problems in cancer detection or access across your organization?",
+        "How are these priorities measured?",
+        "What was your most recent diagnostic or screening initiative, and who approved it?",
+        "What made implementation easier or harder at different sites?",
+        "Where are the bottlenecks for imaging, referrals, biopsies, or diagnostic resolution?",
+        "How would additional abnormal findings affect follow-up capacity?",
+        "How would you assess impacts on access and health disparities?",
+        "What evidence, staffing, and budget would be needed for a limited pilot?"
+      ]
+    },
+    "payer": {
+      "label": "Health insurer / payer / coverage-policy professional",
+      "intro": "We are studying evidence and coverage pathways, not requesting a pricing commitment.",
+      "qs": [
+        "Describe a recent coverage review for a cancer-related diagnostic or screening test.",
+        "What evidence influenced the coverage decision most?",
+        "How do evidence requirements differ across screening, high-risk surveillance, and diagnostic evaluation?",
+        "How precisely must the intended patient population and use case be defined?",
+        "How do you distinguish better outcomes from simply detecting more abnormalities?",
+        "How do downstream procedures and uncertain findings affect coverage review?",
+        "What economic analyses and time horizons are useful?",
+        "What pathways exist for evidence-generating pilots or reconsideration?"
+      ]
+    },
+    "implementation": {
+      "label": "Quality / informatics / compliance / utilization professional",
+      "intro": "We want to understand safeguards and adoption blockers.",
+      "qs": [
+        "Can you describe a diagnostic service your organization delayed or declined?",
+        "Which concerns drove that decision?",
+        "What review or approval processes apply to new testing services?",
+        "What documentation, security, and oversight expectations would apply?",
+        "Which EHR ordering, result routing, and reporting functions are required?",
+        "How is responsibility assigned when results need additional action?",
+        "How are pilot safety, operational performance, and follow-up completion monitored?",
+        "What should a developer address early to avoid preventable implementation issues?"
+      ]
+    },
+    "other": {
+      "label": "Other / self-described role",
+      "intro": "We welcome perspectives not covered by these categories.",
+      "qs": [
+        "What is your connection to cancer screening, diagnosis, research, or healthcare?",
+        "Describe an experience that illustrates a challenge in current cancer-related testing or care.",
+        "Who was affected and what made the issue difficult?",
+        "What current approaches are used to address that problem?",
+        "Which parts of the experience create cost, delay, uncertainty, or extra work?",
+        "Who makes decisions or coordinates next steps in this setting?",
+        "What would need to be shown before a new approach was considered useful?",
+        "What perspective do you think researchers tend to overlook?"
+      ]
+    }
+  },
+  "uses": [
+    [
+      "unsure",
+      "Not sure / not applicable"
+    ],
+    [
+      "early",
+      "Early detection without symptoms"
+    ],
+    [
+      "surveillance",
+      "Surveillance for elevated cancer risk"
+    ],
+    [
+      "diagnostic",
+      "Evaluation after symptoms or abnormal finding"
+    ],
+    [
+      "recurrence",
+      "Monitoring after treatment"
+    ]
+  ],
+  "segments": [
+    [
+      "unspecified",
+      "Prefer not to specify"
+    ],
+    [
+      "surveillance",
+      "Participating in a high-risk surveillance program"
+    ],
+    [
+      "diagnosed",
+      "Have experienced a cancer diagnosis"
+    ],
+    [
+      "caregiver",
+      "Supporting a friend or family member"
+    ],
+    [
+      "routine",
+      "Routine screening experience"
+    ],
+    [
+      "other",
+      "Another context"
+    ]
+  ],
+  "sources": [
+    [
+      "linkedin",
+      "LinkedIn"
+    ],
+    [
+      "social",
+      "Other social media"
+    ],
+    [
+      "direct",
+      "Shared directly by someone"
+    ],
+    [
+      "email",
+      "Email invitation"
+    ],
+    [
+      "other",
+      "Other / prefer not to say"
+    ]
+  ]
+}
