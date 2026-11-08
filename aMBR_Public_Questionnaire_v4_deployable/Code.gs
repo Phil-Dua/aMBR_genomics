@@ -2,9 +2,9 @@
  * aMBR Genomics team interview recorder.
  * Deployed as a Google Apps Script web app:
  * - Execute as: Me (yduan47@wisc.edu, the account that can edit the private Sheet)
- * - Who has access: Anyone within UW-Madison Google Workspace, once you set that on the deployment
- * Interviewers sign in with a Wisc account. The script writes the sheet; they do not need Sheet edit access.
- * Do not share the response Sheet with the public.
+ * - Who has access: Anyone with the link. No Wisc account is required.
+ * The script writes the private sheet. People opening the form do not need Sheet edit access.
+ * Do not share the response Sheet. Share only the form link.
  */
 const RESPONSE_SHEET_ID = '1JG-N2IsdR4kYH-JupwXDsmcJZfwW9qE5hOTcxrb_V0o';
 const RESPONSE_TAB = 'Responses';

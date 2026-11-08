@@ -2,19 +2,15 @@
 
 Team tool for recording a customer-discovery interview. The interviewer fills it in. The interviewee does not.
 
-The live form is the Apps Script web app below. The NSF I-CORPS Drive folder keeps the response spreadsheet and the I-Corps materials. It does not contain the form.
+Anyone with the link can open the form. The response spreadsheet stays private to the team.
 
 ## Open the form
 
-Sign in with a `@wisc.edu` Google account, then open:
+https://script.google.com/macros/s/AKfycbyGPoxpnnK9zqBtJoUbqLSGVWB8i-a6h6enjga0e-IxUR8Umb-XfarkDGsr71zwBC7l7A/exec
 
-https://script.google.com/a/macros/wisc.edu/s/AKfycbyGPoxpnnK9zqBtJoUbqLSGVWB8i-a6h6enjga0e-IxUR8Umb-XfarkDGsr71zwBC7l7A/exec
+No Google account is required. The same link is on the repository home page.
 
-That is the same link on the repository home page. A private window, or a browser that is not signed into a UW–Madison account, cannot open it.
-
-The deployment runs as `yduan47@wisc.edu` and is limited to **Anyone within UW-Madison Google Workspace**. The script writes the sheet. Interviewers do not need spreadsheet edit access.
-
-Do not post the link publicly and do not send it to interviewees.
+The deployment runs as `yduan47@wisc.edu` with **Who has access: Anyone**. The script writes the sheet. People opening the form do not need spreadsheet edit access, and they cannot open the spreadsheet from the form.
 
 ## What you enter
 
@@ -41,4 +37,4 @@ https://docs.google.com/spreadsheets/d/1JG-N2IsdR4kYH-JupwXDsmcJZfwW9qE5hOTcxrb_
 1. Open the Apps Script project `aMBR_interview`.
 2. Replace `Code.gs` and the `Index` HTML file with the copies in this folder.
 3. Save, then **Deploy → Manage deployments → Edit → New version → Deploy**.
-4. Reload the web app. Keep **Execute as: Me** and **Who has access: Anyone within UW-Madison Google Workspace**.
+4. Reload the web app. Keep **Execute as: Me** and **Who has access: Anyone**.
