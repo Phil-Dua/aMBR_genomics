@@ -1,23 +1,258 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#063e41"><title>aMBR Genomics | Share your perspective</title>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#075a5d">
+<title>aMBR Genomics | Interview notes</title>
 <style>
-:root{--navy:#0a303b;--sea:#086b66;--ink:#1a343c;--mute:#546c71;--line:#d5e5df;--bg:#f4f9f6;--white:#fff;--mint:#ddf4ed;--gold:#f5eedc;--focus:#b8e5dc}*{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--bg);font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}a{color:var(--sea)}h1,h2,h3,p{margin:0 0 12px}h1{font-size:clamp(32px,5.1vw,60px);line-height:1.11;letter-spacing:-.045em;font-weight:800}h2{font-size:clamp(23px,3vw,32px);line-height:1.18;letter-spacing:-.025em}h3{font-size:18px}.wrap{width:min(1020px,calc(100% - 34px));margin:auto}header{background:#fff;border-bottom:1px solid var(--line)}.bar{display:flex;gap:12px;align-items:center;justify-content:space-between;padding:13px 0}.brand{display:flex;align-items:center;gap:10px;font-weight:820;color:var(--navy);letter-spacing:-.02em}.brandmark{background:var(--sea);color:#fff;border-radius:12px;display:grid;place-items:center;width:41px;height:41px;font-size:26px}.brand small{display:block;font-weight:650;font-size:10px;letter-spacing:.17em;color:var(--sea)}.tag{background:var(--mint);color:var(--sea);border-radius:100px;font-size:12px;font-weight:750;padding:7px 12px}.container{padding:48px 0 60px}.lead{font-size:18px;color:var(--mute);max-width:730px}.eyebrow{text-transform:uppercase;font-size:12px;letter-spacing:.16em;font-weight:850;color:var(--sea);margin-bottom:14px}.card{background:var(--white);border:1px solid var(--line);border-radius:17px;padding:28px;box-shadow:0 14px 40px #103c3910;margin:18px 0}.info{background:#e6f4ee;border-left:4px solid #2a9482;border-radius:10px;padding:17px 19px;font-size:14px}.info.warning{background:#fff6e5;border-color:#ad8635}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.role{padding:17px;text-align:left;background:#fff;border:2px solid var(--line);border-radius:13px;color:var(--ink)}.role:hover,.role:focus-visible{border-color:#239887;outline:0}.role.selected{background:#e6f6f0;border-color:var(--sea)}.role strong{display:block;font-size:15px}.role small{display:block;color:var(--mute);font-size:12px;margin-top:4px}.field{margin:19px 0}.field label{display:block;font-weight:730;font-size:14px;margin-bottom:7px}.field .hint{display:block;color:var(--mute);font-size:12px;margin:3px 0 8px}.field select,.field input[type=text],.field textarea{width:100%;border:1px solid #b5cfc6;background:#fff;color:var(--ink);border-radius:10px;padding:11px 12px;min-height:44px}.field textarea{height:116px;resize:vertical}.field :is(select,input,textarea):focus-visible{outline:3px solid var(--focus);border-color:var(--sea)}.choices{display:flex;flex-wrap:wrap;gap:8px}.chip{border:1px solid #bfd5ce;background:#fff;color:var(--ink);border-radius:24px;padding:9px 11px;font-size:13px}.chip.selected{background:var(--sea);color:#fff;border-color:var(--sea)}.question{padding:22px 0;border-bottom:1px solid var(--line)}.question:last-child{border-bottom:0}.question .num{font-size:12px;font-weight:800;color:var(--sea);letter-spacing:.09em}.question label{display:block;font-size:17px;line-height:1.38;font-weight:720;margin:6px 0 11px}.question textarea{width:100%;min-height:108px;resize:vertical;border:1px solid #bbd3cb;border-radius:11px;padding:13px;color:var(--ink)}.question textarea:focus-visible{outline:3px solid var(--focus)}.muted{color:var(--mute)}.tiny{font-size:12px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;background:var(--sea);border:2px solid var(--sea);border-radius:11px;padding:12px 19px;min-height:46px;color:#fff;font-weight:780;cursor:pointer}.btn:hover{filter:brightness(.93)}.btn.secondary{background:#fff;color:var(--sea)}.btn[disabled]{background:#8fa5a0;border-color:#8fa5a0;cursor:not-allowed}.row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.progress{height:9px;background:#e5eeea;border-radius:20px;overflow:hidden;margin:12px 0 0}.progress>div{height:100%;width:0;background:var(--sea);transition:width .2s}.steps{font-weight:800;color:var(--sea);font-size:12px;letter-spacing:.12em;text-transform:uppercase}.checkrow{display:flex;gap:10px;align-items:start;margin:17px 0}.checkrow input{margin-top:5px;accent-color:var(--sea);width:18px;height:18px}.checkrow label{font-size:14px}.status{padding:12px 14px;border-radius:11px;font-size:14px;font-weight:740}.status.ok{background:#e8f8ed;color:#206a42}.status.err{background:#fff0ec;color:#983a2f}.hidden{display:none!important}.footer{margin-top:20px;padding:25px 0 33px;border-top:1px solid var(--line);font-size:12px;color:var(--mute)}.review{background:#f4faf7;border:1px solid var(--line);border-radius:12px;padding:15px;margin-bottom:16px}.review dt{font-size:12px;font-weight:800;color:var(--sea)}.review dd{margin:0 0 9px;font-size:14px}@media(max-width:670px){.grid{grid-template-columns:1fr}.container{padding-top:32px}.card{padding:20px}.bar .tag{font-size:10px}.question label{font-size:16px}}
-</style></head><body><header><div class="wrap bar"><div class="brand"><span class="brandmark">a</span><span>aMBR Genomics<small>CUSTOMER DISCOVERY</small></span></div><span class="tag" id="modeTag">PUBLIC QUESTIONNAIRE PREVIEW</span></div></header><main class="wrap container" id="root"></main><footer class="wrap footer">Customer discovery only · A test is under development; no accuracy or clinical benefit has been established. This questionnaire does not provide medical advice. Never include names, exact dates, patient identifiers, medical record numbers, or other identifiable health information.</footer>
-<script type="application/json" id="questionData">{"version":"4.0-public-self-service","banks":{"patient":{"label":"Patient or person with a cancer-related screening experience","intro":"Tell us about your experience navigating screening, surveillance, or diagnostic evaluation. You do not need to tell us your diagnosis or medical history.","qs":["Think of a recent cancer screening or evaluation decision. What led you to consider it?","How did you decide what to do, and what sources of advice did you trust?","What was the process like from arranging an appointment to receiving information or results?","What part of the experience was most inconvenient, uncertain, confusing, or difficult?","If any further evaluation was discussed, what made the next steps easier or harder to understand?","How did practical considerations such as time, cost, travel, or insurance influence your choices?","What information or support would have made that experience better?","What should people designing a future cancer-detection test understand about patients’ needs?"]},"caregiver":{"label":"Family caregiver or support person","intro":"Please share your experience supporting someone, without naming them or providing identifiable health details.","qs":["Think of a time you supported someone through cancer screening or evaluation. What role did you play?","What did the person need the most help understanding or arranging?","Which parts of scheduling, waiting, results, or follow-up were hardest to navigate?","How did the care team explain results and what might happen next?","What practical burdens did you notice, such as travel, work, costs, or coordination?","What support, information, or resources would have helped?","Who was responsible for arranging follow-up, and did that process work?","What should people creating new screening or detection services learn from caregivers?"]},"public":{"label":"General public / person without a specific professional role","intro":"You can answer from your general experience or expectations; no cancer experience is necessary.","qs":["How do you usually learn about recommended health screening tests?","What information do you look for before deciding whether to consider a new health test?","What would make you trust or question information about a cancer-related test?","What practical barriers might make a screening appointment difficult to complete?","What would you want to know about the chance of unclear or incorrect results?","Who would you expect to explain an abnormal result and help arrange further evaluation?","How might out-of-pocket costs or insurance coverage affect your decision?","What else should developers understand about public experiences with screening?"]},"primary_care":{"label":"Primary care MD / DO / NP / PA","intro":"We are interested in real clinical decision pathways and recent examples, not endorsements.","qs":["How do you currently decide which cancer screening or risk-evaluation options to discuss?","Can you describe a recent situation where current options did not fully address a patient need (without identifiers)?","What made that situation challenging, and how did you respond?","How did your team evaluate the last new screening or diagnostic test you considered adopting?","What evidence, guidance, or institutional approvals influenced that decision?","Who currently owns follow-up when a result is uncertain or abnormal?","What result-report information or referral access is needed to act appropriately?","How do coverage, cost, appointment time, and specialist access affect ordering decisions?"]},"specialist":{"label":"Specialist physician (oncology, gastroenterology, surgery, radiology, etc.)","intro":"Please describe processes and anonymized examples from your practice.","qs":["Which patient populations in your practice have the greatest unmet needs in earlier cancer detection or evaluation?","Can you describe a recent example that revealed a limitation of the current pathway?","What diagnostic tools were used, and what information was missing or delayed?","Which abnormal results have clear next steps, and which lead to diagnostic uncertainty?","How do you judge whether a biomarker adds clinical value beyond available tests?","What evidence would you require before changing clinical management?","What follow-up imaging, endoscopy, or other evaluation could your team realistically support?","What would make a limited pilot meaningful, and what would make it inappropriate?"]},"genetic":{"label":"Genetic counselor / hereditary cancer program","intro":"Distinguish inherited susceptibility testing from tests intended to detect possible current disease.","qs":["How do patients typically enter risk assessment and surveillance programs?","What information determines current surveillance recommendations?","Where do patients continue to experience unmet needs despite existing options?","What kinds of uncertain results are most difficult to explain?","How do you explain inherited cancer risk versus a signal suggesting cancer might currently be present?","What processes address conflicting, uncertain, or abnormal findings?","What evidence would be needed before discussing an additional detection test with patients?","What counseling materials, communication channels, and referrals would need to accompany it?"]},"nurse":{"label":"Nurse / nurse navigator / referral or program coordinator","intro":"Please focus on how work actually gets done across care teams.","qs":["What usually happens after a patient has an abnormal cancer-related result?","Who contacts the patient, schedules the next steps, and tracks completion?","Where do people most often encounter delays or become lost to follow-up?","Which patient questions and concerns consume the most time?","How do transportation, insurance, language, or work obligations affect follow-up?","What happens when follow-up does not resolve the uncertainty?","How much staff coordination does a typical abnormal result require?","What would need to change before your team could handle additional test-related referrals?"]},"scientist":{"label":"Scientist / PhD researcher / translational investigator","intro":"Tell us how you evaluate evidence and translational relevance.","qs":["What cancer detection or risk-stratification problem do current research approaches address least well?","Which clinical populations should be studied separately, and why?","How would you evaluate a new biomarker against existing alternatives?","What analytical performance, biological controls, and confounders would be especially important?","Which benign or precursor conditions should be represented in validation cohorts?","What evidence would distinguish biological plausibility from clinical usefulness?","Which study-design mistakes most often limit translational adoption?","Who else should inform the choice of first clinical use case?"]},"laboratory":{"label":"Clinical laboratory director / molecular pathology / lab operations","intro":"Tell us about laboratory validation and operational requirements.","qs":["What prompted the most recent outside assay your organization implemented?","Who participated in evaluating its analytical and clinical validation?","What specimen collection, storage, handling, or transport challenges arise most often?","How are unsuccessful assays or unsuitable samples handled?","What turnaround time is clinically useful for the decisions the test would inform?","What result reporting, LIS, or EHR integration requirements apply?","How do you choose between a send-out test and an in-house assay?","Which technical or regulatory concerns could prevent a pilot?"]},"finance":{"label":"Health system finance / procurement / service-line budget leader","intro":"We want to understand real purchasing and billing arrangements, without presuming who pays.","qs":["Can you walk us through a recent decision to contract for a diagnostic test?","Who owned the budget and who authorized spending?","What clinical sponsorship and financial evidence were required?","How are comparable tests billed to hospitals, insurers, or patients?","Who absorbs denied claims and downstream follow-up costs?","Which costs beyond the test itself influence a decision?","What would a pilot need to show before broader procurement?","What contracting steps and timelines should a new vendor anticipate?"]},"administrator":{"label":"Health system administrator / population health / clinical program leader","intro":"We are asking about program adoption, patient access, and operational capacity.","qs":["What are the highest-priority problems in cancer detection or access across your organization?","How are these priorities measured?","What was your most recent diagnostic or screening initiative, and who approved it?","What made implementation easier or harder at different sites?","Where are the bottlenecks for imaging, referrals, biopsies, or diagnostic resolution?","How would additional abnormal findings affect follow-up capacity?","How would you assess impacts on access and health disparities?","What evidence, staffing, and budget would be needed for a limited pilot?"]},"payer":{"label":"Health insurer / payer / coverage-policy professional","intro":"We are studying evidence and coverage pathways, not requesting a pricing commitment.","qs":["Describe a recent coverage review for a cancer-related diagnostic or screening test.","What evidence influenced the coverage decision most?","How do evidence requirements differ across screening, high-risk surveillance, and diagnostic evaluation?","How precisely must the intended patient population and use case be defined?","How do you distinguish better outcomes from simply detecting more abnormalities?","How do downstream procedures and uncertain findings affect coverage review?","What economic analyses and time horizons are useful?","What pathways exist for evidence-generating pilots or reconsideration?"]},"implementation":{"label":"Quality / informatics / compliance / utilization professional","intro":"We want to understand safeguards and adoption blockers.","qs":["Can you describe a diagnostic service your organization delayed or declined?","Which concerns drove that decision?","What review or approval processes apply to new testing services?","What documentation, security, and oversight expectations would apply?","Which EHR ordering, result routing, and reporting functions are required?","How is responsibility assigned when results need additional action?","How are pilot safety, operational performance, and follow-up completion monitored?","What should a developer address early to avoid preventable implementation issues?"]},"other":{"label":"Other / self-described role","intro":"We welcome perspectives not covered by these categories.","qs":["What is your connection to cancer screening, diagnosis, research, or healthcare?","Describe an experience that illustrates a challenge in current cancer-related testing or care.","Who was affected and what made the issue difficult?","What current approaches are used to address that problem?","Which parts of the experience create cost, delay, uncertainty, or extra work?","Who makes decisions or coordinates next steps in this setting?","What would need to be shown before a new approach was considered useful?","What perspective do you think researchers tend to overlook?"]}},"uses":[["unsure","Not sure / not applicable"],["early","Early detection without symptoms"],["surveillance","Surveillance for elevated cancer risk"],["diagnostic","Evaluation after symptoms or abnormal finding"],["recurrence","Monitoring after treatment"]],"segments":[["unspecified","Prefer not to specify"],["surveillance","Participating in a high-risk surveillance program"],["diagnosed","Have experienced a cancer diagnosis"],["caregiver","Supporting a friend or family member"],["routine","Routine screening experience"],["other","Another context"]],"sources":[["linkedin","LinkedIn"],["social","Other social media"],["direct","Shared directly by someone"],["email","Email invitation"],["other","Other / prefer not to say"]]}</script>
+:root{--dark:#0d4245;--sea:#007f82;--mint:#eaf8f5;--bg:#f5f8f7;--ink:#203437;--muted:#5c7174;--line:#dce8e6;--red:#aa3444}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.45}
+.shell{max-width:900px;margin:auto;padding:0 24px 80px}
+header{background:#fff;border-bottom:1px solid var(--line);margin-bottom:36px}
+.top{height:76px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.logo{font-size:21px;font-weight:800;color:var(--dark);letter-spacing:-1px}
+.logo span{color:var(--sea)}
+.pill{border:1px solid #bfe3d9;background:var(--mint);color:#176d65;font-size:12px;font-weight:750;border-radius:50px;padding:7px 12px}
+h1{font-size:clamp(32px,5vw,48px);letter-spacing:-1.5px;line-height:1.08;margin:8px 0 14px;color:var(--dark)}
+h2{font-size:24px;letter-spacing:-.4px;margin:0 0 6px;color:var(--dark)}
+p{margin:0 0 14px}
+.eyebrow{text-transform:uppercase;letter-spacing:2px;color:var(--sea);font-size:12px;font-weight:800}
+.lead{font-size:18px;max-width:720px;color:var(--muted);line-height:1.55}
+.info{background:#eef7f4;border:1px solid #c7e7db;padding:15px 17px;border-radius:14px;font-size:14px;line-height:1.6}
+.card{background:#fff;border-radius:20px;border:1px solid var(--line);padding:28px;margin:22px 0;box-shadow:0 14px 42px #0e5b5014}
+.small{font-size:13px;color:var(--muted)}
+label{display:block;font-weight:700;margin:12px 0 7px;font-size:14px}
+input,textarea,select{font:inherit;width:100%;border:1px solid #cddfda;border-radius:11px;padding:12px 14px;background:#fff;color:var(--ink)}
+textarea{min-height:96px;resize:vertical}
+input:focus,textarea:focus,select:focus{outline:2px solid #54c0b5;border-color:var(--sea)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.btn{appearance:none;border:0;border-radius:12px;background:var(--sea);color:#fff;padding:13px 22px;font:inherit;font-weight:750;cursor:pointer;min-height:48px}
+.btn:hover{background:#08676b}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn.alt{background:#edf4f2;color:var(--dark)}
+.actions{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:22px}
+.q{border-top:1px solid var(--line);padding-top:18px;margin-top:16px}
+.number{font-size:11px;color:var(--sea);font-weight:800;letter-spacing:1.2px}
+.section-step{font-size:13px;color:var(--sea);font-weight:800;letter-spacing:.4px;margin-bottom:10px}
+.muted{color:var(--muted)}
+.check{display:flex;gap:12px;align-items:flex-start;margin-top:22px;padding:15px;background:#f0f8f6;border-radius:12px}
+.check input{width:18px;height:18px;flex:0 0 auto;margin-top:3px}
+.check label{margin:0;font-weight:500}
+.foot{margin-top:26px;color:var(--muted);font-size:12px;text-align:center}
+.status{margin-top:14px;padding:13px;border-radius:10px;background:#f0f8f6;color:#1b685c;display:none}
+.status.error{background:#fff1f1;color:var(--red)}
+.status.show{display:block}
+.tag{font-size:12px;color:var(--sea);background:#e6f6f1;padding:5px 10px;border-radius:20px;font-weight:700}
+.layout-bar{display:flex;justify-content:space-between;align-items:center;gap:8px}
+@media(max-width:680px){
+  .shell{padding:0 16px 50px}
+  .card{padding:18px}
+  .cols{grid-template-columns:1fr;gap:0}
+  .actions{align-items:stretch}
+  .btn{flex:1}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="shell top">
+    <div class="logo">a<span>MBR</span> Genomics</div>
+    <span class="pill">Team interview notes</span>
+  </div>
+</header>
+<main class="shell">
+  <section id="intro">
+    <div class="eyebrow">For the interview team</div>
+    <h1>Record what the interviewee said.</h1>
+    <p class="lead">Use this during or just after a customer-discovery conversation. Choose their perspective, ask the four prompts, and type their answers. The interviewee does not fill this in.</p>
+    <div class="info">Do not type names, contact details, dates of birth, medical-record numbers, or other identifiers. If a quote would identify someone, paraphrase it. This is an internal note, not a clinical record and not medical advice.</div>
+  </section>
+  <section id="app"></section>
+  <div class="foot">aMBR Genomics · NSF I-Corps customer discovery · Notes stay in the private team spreadsheet.</div>
+</main>
+<script id="bank-data" type="application/json">[{"id":"patient","label":"Patient or person with a cancer-related screening experience","intro":"Record how they described screening, surveillance, or diagnostic evaluation. Do not record a diagnosis or medical history.","qs":["Think of a recent cancer screening or evaluation decision. What led you to consider it?","What was the process like from arranging an appointment to receiving information or results?","What part of the experience was most inconvenient, uncertain, confusing, or difficult?","What information or support would have made that experience better?"]},{"id":"caregiver","label":"Family caregiver or support person","intro":"Record how they described supporting someone, without naming that person.","qs":["Think of a time you supported someone through cancer screening or evaluation. What role did you play?","What did the person need the most help understanding or arranging?","Which parts of scheduling, waiting, results, or follow-up were hardest to navigate?","What support, information, or resources would have helped?"]},{"id":"public","label":"General public / person without a specific professional role","intro":"Record their general experience or expectations. No cancer experience is required.","qs":["How do you usually learn about recommended health screening tests?","What would make you trust or question information about a cancer-related test?","What practical barriers might make a screening appointment difficult to complete?","Who would you expect to explain an abnormal result and help arrange further evaluation?"]},{"id":"primary_care","label":"Primary care MD / DO / NP / PA","intro":"Record clinical pathways and recent examples, not an endorsement.","qs":["How do you currently decide which cancer screening or risk-evaluation options to discuss?","Can you describe a recent situation where current options did not fully address a patient need (without identifiers)?","Who currently owns follow-up when a result is uncertain or abnormal?","How do coverage, cost, appointment time, and specialist access affect ordering decisions?"]},{"id":"specialist","label":"Specialist physician (oncology, gastroenterology, surgery, radiology, etc.)","intro":"Record processes and anonymized examples from their practice.","qs":["Which patient populations in your practice have the greatest unmet needs in earlier cancer detection or evaluation?","Can you describe a recent example that revealed a limitation of the current pathway?","How do you judge whether a biomarker adds clinical value beyond available tests?","What follow-up imaging, endoscopy, or other evaluation could your team realistically support?"]},{"id":"genetic","label":"Genetic counselor / hereditary cancer program","intro":"Keep inherited-risk testing separate from a test meant to detect possible current disease.","qs":["How do patients typically enter risk assessment and surveillance programs?","Where do patients continue to experience unmet needs despite existing options?","How do you explain inherited cancer risk versus a signal suggesting cancer might currently be present?","What evidence would be needed before discussing an additional detection test with patients?"]},{"id":"nurse","label":"Nurse / nurse navigator / referral or program coordinator","intro":"Record how the work actually moves across the care team.","qs":["What usually happens after a patient has an abnormal cancer-related result?","Where do people most often encounter delays or become lost to follow-up?","What happens when follow-up does not resolve the uncertainty?","What would need to change before your team could handle additional test-related referrals?"]},{"id":"scientist","label":"Scientist / PhD researcher / translational investigator","intro":"Record how they judge evidence and whether a finding could translate.","qs":["What cancer detection or risk-stratification problem do current research approaches address least well?","How would you evaluate a new biomarker against existing alternatives?","Which benign or precursor conditions should be represented in validation cohorts?","Which study-design mistakes most often limit translational adoption?"]},{"id":"laboratory","label":"Clinical laboratory director / molecular pathology / lab operations","intro":"Record laboratory validation and day-to-day operating constraints.","qs":["What prompted the most recent outside assay your organization implemented?","What specimen collection, storage, handling, or transport challenges arise most often?","What turnaround time is clinically useful for the decisions the test would inform?","How do you choose between a send-out test and an in-house assay?"]},{"id":"finance","label":"Health system finance / procurement / service-line budget leader","intro":"Record how a test is actually bought and billed, without assuming who pays.","qs":["Can you walk us through a recent decision to contract for a diagnostic test?","Who owned the budget and who authorized spending?","Who absorbs denied claims and downstream follow-up costs?","What would a pilot need to show before broader procurement?"]},{"id":"administrator","label":"Health system administrator / population health / clinical program leader","intro":"Record program adoption, patient access, and operating capacity.","qs":["What are the highest-priority problems in cancer detection or access across your organization?","What was your most recent diagnostic or screening initiative, and who approved it?","Where are the bottlenecks for imaging, referrals, biopsies, or diagnostic resolution?","How would you assess impacts on access and health disparities?"]},{"id":"payer","label":"Health insurer / payer / coverage-policy professional","intro":"Record evidence and coverage pathways. This is not a pricing ask.","qs":["Describe a recent coverage review for a cancer-related diagnostic or screening test.","How do evidence requirements differ across screening, high-risk surveillance, and diagnostic evaluation?","How do you distinguish better outcomes from simply detecting more abnormalities?","What economic analyses and time horizons are useful?"]},{"id":"implementation","label":"Quality / informatics / compliance / utilization professional","intro":"Record the safeguards and the reasons a service would stall.","qs":["Can you describe a diagnostic service your organization delayed or declined?","What review or approval processes apply to new testing services?","Which EHR ordering, result routing, and reporting functions are required?","How are pilot safety, operational performance, and follow-up completion monitored?"]},{"id":"other","label":"Other / self-described role","intro":"Record a perspective that does not fit the categories above.","qs":["What is your connection to cancer screening, diagnosis, research, or healthcare?","Who was affected and what made the issue difficult?","Which parts of the experience create cost, delay, uncertainty, or extra work?","What would need to be shown before a new approach was considered useful?"]}]</script>
 <script>
-(()=>{'use strict';
-const DATA=JSON.parse(document.getElementById('questionData').textContent);
-const REAL=typeof google!=='undefined' && !!google.script && !!google.script.run;
-document.getElementById('modeTag').textContent=REAL?'VOLUNTARY RESEARCH QUESTIONNAIRE':'LOCAL PREVIEW · NOT LIVE';
-const root=document.getElementById('root');
-const state={step:0,primary:'',otherRoles:[],selfRole:'',subtype:'',usecase:'unsure',segment:'unspecified',source:'other',answers:{},additional:'',ack:false,honeypot:''};
-const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const labels=Object.entries(DATA.banks).map(([id,r])=>({id,label:r.label}));
-function render(){if(state.step===0)home();else if(state.step===1)profile();else if(state.step===2)questions();else if(state.step===3)review();else done();window.scrollTo({top:0,behavior:'instant'});}
-function home(){root.innerHTML=`<section><div class="eyebrow">Help us understand real experiences</div><h1>What should cancer detection look like from your perspective?</h1><p class="lead">aMBR Genomics is exploring unmet needs in cancer screening, follow-up, and care pathways. We are learning from patients, caregivers, clinicians, researchers, and the public—before making assumptions about a future test.</p><div class="row" style="margin-top:21px"><span class="tag">About 8–12 minutes</span><span class="tag">No account required</span><span class="tag">Skip any question</span></div></section><section class="card"><h2>First, how would you describe your perspective?</h2><p class="muted">Choose the role you want to answer from today. You can add other roles on the next screen.</p><div class="grid">${labels.map(x=>`<button class="role ${state.primary===x.id?'selected':''}" type="button" data-role="${esc(x.id)}" aria-pressed="${state.primary===x.id}"><strong>${esc(x.label)}</strong><small>${x.id==='patient'?'Personal perspective':x.id==='other'?'Describe your background in your own words':'Professional or lived experience'}</small></button>`).join('')}</div><div class="row" style="margin-top:23px"><span class="muted tiny">Please do not include identifiable patient or personal medical information.</span><button type="button" class="btn" id="begin" ${!state.primary?'disabled':''}>Continue →</button></div></section><div class="info"><strong>Why we're asking:</strong> Our goal is to understand current practices, decisions, barriers, and unmet needs—not to promote a test. A blood-based cancer-detection test is still in development, and a positive signal would require appropriate diagnostic follow-up.</div>${!REAL?'<div class="info warning" style="margin-top:16px"><strong>Preview only:</strong> This file demonstrates the public experience but does not transmit or save answers. Submission becomes active only in the deployed, authorized Google Apps Script web app.</div>':''}`;root.querySelectorAll('[data-role]').forEach(b=>b.onclick=()=>{state.primary=b.dataset.role;root.querySelectorAll('[data-role]').forEach(z=>{z.classList.toggle('selected',z===b);z.setAttribute('aria-pressed',z===b?'true':'false')});document.getElementById('begin').disabled=false});document.getElementById('begin').onclick=()=>{state.step=1;render()};}
-function profile(){const other=labels.filter(l=>l.id!==state.primary);root.innerHTML=`<div class="steps">Step 2 of 4 · About your perspective</div><section class="card"><h2>Tell us a little about your role</h2><p class="muted">We do not request your name, email address, or employer. These answers help us send you relevant questions and interpret results by stakeholder group.</p><div class="review"><strong>Your primary perspective:</strong> ${esc(DATA.banks[state.primary].label)} <button class="btn secondary" id="change" type="button" style="margin-left:12px;padding:5px 10px;min-height:30px;font-size:12px">Change</button></div><div class="field"><label>Do any other roles describe you? (optional)</label><span class="hint">Select as many as apply; the primary role determines your question bank.</span><div class="choices">${other.map(l=>`<button type="button" class="chip ${state.otherRoles.includes(l.id)?'selected':''}" data-other="${esc(l.id)}" aria-pressed="${state.otherRoles.includes(l.id)}">${esc(l.label)}</button>`).join('')}</div></div><div class="field"><label for="selfRole">Specific title, specialty, or background (optional)</label><input id="selfRole" type="text" maxlength="120" placeholder="For example: GI physician, nurse navigator, caregiver, student" value="${esc(state.selfRole)}"><span class="hint">Do not include your name or the names of patients.</span></div><div class="field"><label for="context">Which context best relates to your answers?</label><select id="context">${DATA.uses.map(([id,label])=>`<option value="${id}" ${state.usecase===id?'selected':''}>${esc(label)}</option>`).join('')}</select><span class="hint">These are separate potential applications, not one established product use case.</span></div><div class="field"><label for="segment">Experience you are drawing on (optional)</label><select id="segment">${DATA.segments.map(([id,label])=>`<option value="${id}" ${state.segment===id?'selected':''}>${esc(label)}</option>`).join('')}</select></div><div class="field"><label for="source">How did you find this questionnaire? (optional)</label><select id="source">${DATA.sources.map(([id,label])=>`<option value="${id}" ${state.source===id?'selected':''}>${esc(label)}</option>`).join('')}</select></div><div class="row"><button class="btn secondary" id="back" type="button">← Back</button><button class="btn" id="next" type="button">Continue to questions →</button></div></section>`;root.querySelectorAll('[data-other]').forEach(b=>b.onclick=()=>{const id=b.dataset.other;state.otherRoles=state.otherRoles.includes(id)?state.otherRoles.filter(x=>x!==id):[...state.otherRoles,id];b.classList.toggle('selected');b.setAttribute('aria-pressed',state.otherRoles.includes(id)?'true':'false')});const save=()=>{state.selfRole=document.getElementById('selfRole').value.trim();state.usecase=document.getElementById('context').value;state.segment=document.getElementById('segment').value;state.source=document.getElementById('source').value};document.getElementById('change').onclick=()=>{save();state.step=0;render()};document.getElementById('back').onclick=()=>{save();state.step=0;render()};document.getElementById('next').onclick=()=>{save();state.step=2;render()};}
-function questions(){const bank=DATA.banks[state.primary];const n=bank.qs.filter((_,i)=>(state.answers['q'+(i+1)]||'').trim()).length;root.innerHTML=`<div class="steps">Step 3 of 4 · ${esc(bank.label)}</div><section class="card"><div class="row"><div><h2>Share your experience</h2><p class="muted">${esc(bank.intro)}</p></div><span class="tag" id="count">${n} / 8 answered</span></div><div class="progress"><div id="bar" style="width:${n*12.5}%"></div></div><p class="tiny muted" style="margin-top:14px">These are open-ended prompts. Answer the ones that matter most to you; all are optional. Please do not name patients or provide identifiable medical details.</p>${bank.qs.map((q,i)=>`<div class="question"><div class="num">QUESTION ${i+1} · OPTIONAL</div><label for="q${i+1}">${esc(q)}</label><textarea id="q${i+1}" maxlength="4000" placeholder="Your perspective (optional)">${esc(state.answers['q'+(i+1)]||'')}</textarea></div>`).join('')}<div class="field"><label for="additional">Is there anything else we should have asked? (optional)</label><textarea id="additional" maxlength="4000" placeholder="Additional feedback">${esc(state.additional)}</textarea></div><div class="row"><button class="btn secondary" id="back" type="button">← Back</button><button class="btn" id="next" type="button">Review answers →</button></div></section>`;const save=()=>{bank.qs.forEach((_,i)=>state.answers['q'+(i+1)]=document.getElementById('q'+(i+1)).value);state.additional=document.getElementById('additional').value};root.querySelectorAll('textarea').forEach(a=>a.addEventListener('input',()=>{save();const n=bank.qs.filter((_,i)=>(state.answers['q'+(i+1)]||'').trim()).length;document.getElementById('count').textContent=n+' / 8 answered';document.getElementById('bar').style.width=(n*12.5)+'%'}));document.getElementById('back').onclick=()=>{save();state.step=1;render()};document.getElementById('next').onclick=()=>{save();state.step=3;render()};}
-function review(){const bank=DATA.banks[state.primary];let n=bank.qs.filter((_,i)=>(state.answers['q'+(i+1)]||'').trim()).length;root.innerHTML=`<div class="steps">Step 4 of 4 · Review & submit</div><section class="card"><h2>Review your contribution</h2><p class="muted">You've answered ${n} of 8 optional prompts. Thank you for sharing your perspective. You can return to edit before submitting.</p><dl class="review"><dt>Primary perspective</dt><dd>${esc(bank.label)}</dd><dt>Clinical context</dt><dd>${esc(DATA.uses.find(x=>x[0]===state.usecase)?.[1])}</dd><dt>Questions answered</dt><dd>${n} of 8${state.additional.trim()?' plus additional feedback':''}</dd></dl><div class="info"><strong>Important:</strong> Participation is voluntary. This questionnaire is for customer discovery and is not clinical advice, clinical research enrollment, or a diagnostic service. A proposed blood-based cancer-detection test is in development; accuracy and clinical benefit have not been established. Please do not include identifying or sensitive health information. Your responses will be reviewed only by authorized aMBR team members.</div><div class="checkrow"><input id="ack" type="checkbox" ${state.ack?'checked':''}><label for="ack">I understand the purpose of this questionnaire and agree to voluntarily submit the answers I provided.</label></div><div class="hidden" aria-hidden="true"><label>Leave this blank<input id="company-site" type="text" autocomplete="off" tabindex="-1"></label></div><div id="feedback" role="status" aria-live="polite"></div><div class="row" style="margin-top:20px"><button class="btn secondary" id="back" type="button">← Edit responses</button><button class="btn" id="submit" type="button" ${!state.ack?'disabled':''}>${REAL?'Submit responses securely →':'Preview submission (not live)'}</button></div><p class="tiny muted" style="margin-top:14px">You won't receive access to anyone else's responses. The team-only response spreadsheet is not public.</p></section>`;document.getElementById('ack').onchange=e=>{state.ack=e.target.checked;document.getElementById('submit').disabled=!state.ack};document.getElementById('back').onclick=()=>{state.step=2;render()};document.getElementById('submit').onclick=submit;}
-function submit(){const fb=document.getElementById('feedback');const btn=document.getElementById('submit');if(!state.ack)return;if(!REAL){fb.className='status err';fb.textContent='Offline preview: no information was transmitted. The deployed public website will use private server-side submission.';return;}btn.disabled=true;btn.textContent='Submitting…';fb.className='status';fb.textContent='Sending securely…';const payload={version:DATA.version,bankId:state.primary,otherRoles:state.otherRoles,selfRole:state.selfRole,usecase:state.usecase,segment:state.segment,source:state.source,answers:state.answers,additional:state.additional,ack:state.ack,hp:document.getElementById('company-site').value,questionTexts:DATA.banks[state.primary].qs};google.script.run.withSuccessHandler(res=>{if(res&&res.ok){state.confirmation=res.id;state.step=4;render()}else{fail('Unable to confirm the submission. Please try again.')}}).withFailureHandler(e=>{fail('Submission was not saved. Please retry or contact the study team. '+(e&&e.message?e.message:''))}).submitResponse(payload);function fail(msg){fb.className='status err';fb.textContent=msg;btn.disabled=false;btn.textContent='Try submitting again';}}
-function done(){root.innerHTML=`<section class="card" style="padding:48px 28px;text-align:center"><div class="eyebrow">Thank you</div><h1 style="font-size:clamp(31px,4vw,50px)">Your perspective matters.</h1><p class="lead" style="margin:20px auto">Your responses have been submitted to a private aMBR team database. We appreciate your time and feedback.</p><div class="info" style="margin:20px auto;max-width:620px">Confirmation reference: <strong>${esc(state.confirmation||'Saved')}</strong><br>Responses are not publicly visible. This is not a medical or diagnostic service.</div><button class="btn secondary" id="again" type="button">Start another response</button></section>`;document.getElementById('again').onclick=()=>location.reload();}
-render();
-})();</script></body></html>
+(function(){
+  'use strict';
+  var DATA = JSON.parse(document.getElementById('bank-data').textContent);
+  var USES = [['unsure','Unsure / not applicable'],['early','Early detection without symptoms'],['surveillance','High-risk surveillance'],['diagnostic','Diagnostic evaluation after a symptom or abnormal finding'],['recurrence','Monitoring after treatment']];
+  var SEGMENTS = [['unspecified','Prefer not to specify'],['routine','Routine screening'],['surveillance','High-risk surveillance'],['diagnosed','Experienced a cancer diagnosis'],['caregiver','Supporting another person'],['other','Other']];
+  var SOURCES = [['direct','Direct interview'],['linkedin','LinkedIn'],['email','Email'],['social','Social media'],['other','Other']];
+  var app = document.getElementById('app');
+  var state = {step:0, role:'', usecase:'unsure', segment:'unspecified', source:'direct', selfRole:'', secondaryRole:'', answers:['','','',''], additional:'', ack:false};
+  var REAL = typeof google !== 'undefined' && google.script && google.script.run;
+
+  function esc(s){
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  }
+  function options(list, selected){
+    return list.map(function(pair){
+      return '<option value="' + esc(pair[0]) + '"' + (pair[0] === selected ? ' selected' : '') + '>' + esc(pair[1]) + '</option>';
+    }).join('');
+  }
+  function roleOptions(){
+    return '<option value="">Select their perspective…</option>' + DATA.map(function(bank){
+      return '<option value="' + esc(bank.id) + '"' + (state.role === bank.id ? ' selected' : '') + '>' + esc(bank.label) + '</option>';
+    }).join('');
+  }
+  function showStatus(message, isError){
+    var box = document.getElementById('send-status');
+    if (!box) return;
+    box.textContent = message;
+    box.className = 'status show' + (isError ? ' error' : '');
+  }
+
+  function render(){
+    if (state.step === 0) roleScreen();
+    else if (state.step === 1) notesScreen();
+    else doneScreen();
+    window.scrollTo({top:0, behavior:'instant'});
+  }
+
+  function roleScreen(){
+    var isOther = state.role === 'other';
+    app.innerHTML =
+      '<section class="card">' +
+        '<div class="section-step">STEP 1 OF 2</div>' +
+        '<h2>Who did you interview?</h2>' +
+        '<p class="muted small">Choose the perspective that best fits this conversation. That choice picks the four prompts.</p>' +
+        '<label for="roleSelect">Interviewee perspective</label>' +
+        '<select id="roleSelect">' + roleOptions() + '</select>' +
+        '<div id="customRoleWrap"' + (isOther ? '' : ' hidden') + '>' +
+          '<label for="customRole">How they described their role <span class="small muted">(required, no name)</span></label>' +
+          '<input id="customRole" maxlength="120" placeholder="For example: medical student, patient advocate" value="' + esc(isOther ? state.selfRole : '') + '">' +
+        '</div>' +
+        '<div class="cols">' +
+          '<div><label for="context">What were they talking about?</label><select id="context">' + options(USES, state.usecase) + '</select></div>' +
+          '<div><label for="source">How was this interview arranged?</label><select id="source">' + options(SOURCES, state.source) + '</select></div>' +
+        '</div>' +
+        '<details style="margin-top:14px"><summary class="small" style="cursor:pointer">Optional context</summary>' +
+          '<div class="cols">' +
+            '<div id="titleWrap"' + (isOther ? ' hidden' : '') + '><label for="title">Specialty or role (no name)</label><input id="title" maxlength="120" placeholder="For example: nurse navigator" value="' + esc(isOther ? '' : state.selfRole) + '"></div>' +
+            '<div><label for="secondary">Second perspective, if they had one</label><input id="secondary" maxlength="120" placeholder="For example: caregiver and scientist" value="' + esc(state.secondaryRole) + '"></div>' +
+          '</div>' +
+          '<label for="segment">Experience they drew on</label><select id="segment">' + options(SEGMENTS, state.segment) + '</select>' +
+        '</details>' +
+        '<div class="actions"><span class="small muted">About four prompts</span><button class="btn" type="button" id="next">Continue →</button></div>' +
+      '</section>';
+
+    var roleSelect = document.getElementById('roleSelect');
+    var customRole = document.getElementById('customRole');
+    var next = document.getElementById('next');
+    function canContinue(){
+      return !!state.role && (state.role !== 'other' || customRole.value.trim());
+    }
+    function refresh(){ next.disabled = !canContinue(); }
+    roleSelect.addEventListener('change', function(){
+      var wasOther = state.role === 'other';
+      state.role = roleSelect.value;
+      if (wasOther && state.role !== 'other') state.selfRole = '';
+      document.getElementById('customRoleWrap').hidden = state.role !== 'other';
+      document.getElementById('titleWrap').hidden = state.role === 'other';
+      refresh();
+    });
+    customRole.addEventListener('input', function(){ state.selfRole = customRole.value; refresh(); });
+    next.addEventListener('click', function(){
+      if (!canContinue()) { if (state.role === 'other') customRole.focus(); return; }
+      state.usecase = document.getElementById('context').value;
+      state.source = document.getElementById('source').value;
+      state.secondaryRole = document.getElementById('secondary').value.trim();
+      state.segment = document.getElementById('segment').value;
+      state.selfRole = state.role === 'other' ? customRole.value.trim() : (document.getElementById('title').value.trim() || '');
+      state.step = 1;
+      render();
+    });
+    refresh();
+  }
+
+  function notesScreen(){
+    var bank = DATA.filter(function(item){ return item.id === state.role; })[0];
+    app.innerHTML =
+      '<section class="card">' +
+        '<div class="layout-bar"><div class="section-step">STEP 2 OF 2</div><span class="tag">' + esc(bank.label) + '</span></div>' +
+        '<h2>Four prompts</h2>' +
+        '<p class="muted small">' + esc(bank.intro) + ' Ask the prompt, then type what they said.</p>' +
+        bank.qs.map(function(question, index){
+          return '<div class="q"><div class="number">PROMPT ' + (index + 1) + ' OF 4' + (index === 3 ? ' · OPTIONAL' : '') + '</div>' +
+            '<label for="q' + index + '">' + esc(question) + '</label>' +
+            '<textarea id="q' + index + '" maxlength="2500" placeholder="What they said">' + esc(state.answers[index]) + '</textarea></div>';
+        }).join('') +
+        '<div class="q"><label for="extra">Anything else from this interview? (optional)</label>' +
+          '<textarea id="extra" maxlength="2500" placeholder="Optional notes">' + esc(state.additional) + '</textarea></div>' +
+        '<div class="check"><input type="checkbox" id="ack"' + (state.ack ? ' checked' : '') + '>' +
+          '<label for="ack">These notes are from the interview. I left out names and identifiers.</label></div>' +
+        '<div id="send-status" class="status" role="status"></div>' +
+        '<div class="actions"><button class="btn alt" type="button" id="back">← Back</button>' +
+          '<button class="btn" type="button" id="submit">Save interview notes →</button></div>' +
+      '</section>';
+
+    function saveFields(){
+      state.answers = bank.qs.map(function(_, index){ return document.getElementById('q' + index).value; });
+      state.additional = document.getElementById('extra').value;
+      state.ack = document.getElementById('ack').checked;
+    }
+    app.querySelectorAll('textarea').forEach(function(field){ field.addEventListener('input', saveFields); });
+    document.getElementById('ack').addEventListener('change', saveFields);
+    document.getElementById('back').addEventListener('click', function(){ saveFields(); state.step = 0; render(); });
+    document.getElementById('submit').addEventListener('click', function(){ saveFields(); send(bank); });
+  }
+
+  function send(bank){
+    if (!state.ack) { showStatus('Check the confirmation box before saving.', true); return; }
+    if (!state.answers.some(function(value){ return value.trim(); })) { showStatus('Record at least one answer before saving.', true); return; }
+    if (!REAL) { showStatus('This local file does not save. Open the deployed team web app while signed in.', true); return; }
+    var button = document.getElementById('submit');
+    button.disabled = true;
+    button.textContent = 'Saving…';
+    showStatus('Saving to the private team sheet…');
+    var payload = {
+      version: '6.1-team-interview-record',
+      bankId: state.role,
+      usecase: state.usecase,
+      segment: state.segment,
+      source: state.source,
+      selfRole: state.selfRole,
+      secondaryRole: state.secondaryRole,
+      questionTexts: bank.qs,
+      answers: {q1: state.answers[0], q2: state.answers[1], q3: state.answers[2], q4: state.answers[3]},
+      additional: state.additional,
+      ack: true,
+      hp: ''
+    };
+    google.script.run
+      .withSuccessHandler(function(result){
+        if (result && result.ok) { state.confirmation = result.id; state.step = 2; render(); }
+        else fail('The sheet did not confirm the save. Try again.');
+      })
+      .withFailureHandler(function(error){
+        fail('The note was not saved. ' + (error && error.message ? error.message : 'Try again.'));
+      })
+      .submitResponse(payload);
+    function fail(message){
+      showStatus(message, true);
+      button.disabled = false;
+      button.textContent = 'Save interview notes →';
+    }
+  }
+
+  function doneScreen(){
+    document.getElementById('intro').style.display = 'none';
+    app.innerHTML =
+      '<section class="card" style="text-align:center;padding:48px 24px">' +
+        '<div class="eyebrow">Saved</div>' +
+        '<h1 style="font-size:clamp(30px,4vw,44px)">Interview notes are in the team sheet.</h1>' +
+        '<p class="lead" style="margin:10px auto">Confirmation ' + esc(state.confirmation || 'Saved') + '. Only the aMBR team can open the spreadsheet.</p>' +
+        '<div class="actions" style="justify-content:center"><button class="btn alt" id="again" type="button">Record another interview</button></div>' +
+      '</section>';
+    document.getElementById('again').addEventListener('click', function(){ location.reload(); });
+  }
+
+  render();
+})();
+</script>
+</body>
+</html>

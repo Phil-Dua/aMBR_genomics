@@ -1,13 +1,14 @@
 /**
- * aMBR Genomics public self-service customer discovery questionnaire.
- * Deployed as a Google Apps Script Web app:
- * - Execute as: Me (an aMBR team account with edit access to the private Sheet)
- * - Who has access: Anyone (public form; responses remain team-only)
+ * aMBR Genomics team interview recorder.
+ * Deployed as a Google Apps Script web app:
+ * - Execute as: Me (yduan47@wisc.edu, the account that can edit the private Sheet)
+ * - Who has access: Anyone within UW-Madison Google Workspace, once you set that on the deployment
+ * Interviewers sign in with a Wisc account. The script writes the sheet; they do not need Sheet edit access.
  * Do not share the response Sheet with the public.
  */
 const RESPONSE_SHEET_ID = '1JG-N2IsdR4kYH-JupwXDsmcJZfwW9qE5hOTcxrb_V0o';
 const RESPONSE_TAB = 'Responses';
-const VERSION = '4.0-public-self-service';
+const VERSION = '6.1-team-interview-record';
 const ROLES = ['patient','caregiver','public','primary_care','specialist','genetic','nurse','scientist','laboratory','finance','administrator','payer','implementation','other'];
 const USES = ['unsure','early','surveillance','diagnostic','recurrence'];
 const SEGMENTS = ['unspecified','surveillance','diagnosed','caregiver','routine','other'];
@@ -15,57 +16,60 @@ const SOURCES = ['linkedin','social','direct','email','other'];
 
 function doGet() {
   return HtmlService.createHtmlOutputFromFile('Index')
-    .setTitle('aMBR Genomics | Customer discovery questionnaire')
+    .setTitle('aMBR Genomics | Interview notes')
     .addMetaTag('viewport','width=device-width, initial-scale=1');
 }
 
-/** The only intentionally public server method for browser submissions. */
+/** Saves one interview record. Called only from the team web app. */
 function submitResponse(data) {
   if (!data || typeof data !== 'object') throw new Error('Invalid submission.');
-  if (data.hp) return {ok:true,id:'received'}; // honeypot: do not persist bots
-  if (data.version !== VERSION || !data.ack) throw new Error('Consent/version missing.');
-  if (!ROLES.includes(data.bankId)) throw new Error('Invalid respondent role.');
+  if (data.hp) return {ok:true,id:'received'};
+  if (data.version !== VERSION || !data.ack) throw new Error('Confirmation missing.');
+  if (!ROLES.includes(data.bankId)) throw new Error('Invalid interviewee role.');
   if (!USES.includes(data.usecase) || !SEGMENTS.includes(data.segment) || !SOURCES.includes(data.source)) throw new Error('Invalid context.');
-  if (!Array.isArray(data.otherRoles) || data.otherRoles.length>ROLES.length || data.otherRoles.some(r=>!ROLES.includes(r))) throw new Error('Invalid secondary roles.');
+  if (!Array.isArray(data.questionTexts) || data.questionTexts.length !== 4) throw new Error('Invalid question text snapshot.');
   if (!data.answers || typeof data.answers !== 'object' || Array.isArray(data.answers)) throw new Error('Invalid answers.');
-  if (!Array.isArray(data.questionTexts) || data.questionTexts.length!==8) throw new Error('Invalid question text snapshot.');
-  if (Object.keys(data.answers).some(k=>!/^q[1-8]$/.test(k))) throw new Error('Invalid question field.');
-  const text = (v,max) => {
+  if (Object.keys(data.answers).some(function(k){ return !/^q[1-4]$/.test(k); })) throw new Error('Invalid question field.');
+  var text = function(v, max) {
     if (typeof v !== 'string' && v != null) throw new Error('Invalid text field.');
-    let s=String(v||'').trim();
-    if (s.length>max) throw new Error('Response too long.');
-    // Protect spreadsheet interpretation of untrusted responses as formulas.
-    if (/^[\s]*[=+@-]/.test(s)) s="'"+s;
+    var s = String(v || '').trim();
+    if (s.length > max) throw new Error('Response too long.');
+    if (/^[\s]*[=+@-]/.test(s)) s = "'" + s;
     return s;
   };
-  const answers=Array.from({length:8},(_,i)=>text(data.answers['q'+(i+1)],4000));
-  const questionTexts=data.questionTexts.map(s=>text(s,350));
-  const extras=text(data.additional,4000);
-  const selfRole=text(data.selfRole,120);
-  const id=Utilities.getUuid();
-  const row=[
-    id, new Date().toISOString(),data.bankId,data.bankId,
-    data.otherRoles.join(', '),selfRole,data.usecase,data.segment,data.source,
-    ...answers,extras,'Yes',VERSION,
-    JSON.stringify(questionTexts),'Submitted'
+  var answers = [1,2,3,4].map(function(n){ return text(data.answers['q' + n], 2500); });
+  if (!answers.some(function(s){ return s; })) throw new Error('Record at least one answer.');
+  var questionTexts = data.questionTexts.map(function(s){ return text(s, 350); });
+  var id = Utilities.getUuid();
+  // Four prompts, then four blanks, so the row still matches the 8-answer Responses sheet.
+  var row = [
+    id, new Date().toISOString(), data.bankId, data.bankId,
+    text(data.secondaryRole, 120), text(data.selfRole, 120), data.usecase, data.segment, data.source,
+    answers[0], answers[1], answers[2], answers[3], '', '', '', '',
+    text(data.additional, 2500), 'Yes', VERSION,
+    JSON.stringify(questionTexts), 'Submitted'
   ];
-  const lock=LockService.getScriptLock();
+  if (row.length !== 22) throw new Error('Expected 22 columns, got ' + row.length);
+  var lock = LockService.getScriptLock();
   if (!lock.tryLock(20000)) throw new Error('Service busy. Retry shortly.');
   try {
-    const sheet=SpreadsheetApp.openById(RESPONSE_SHEET_ID).getSheetByName(RESPONSE_TAB);
+    var sheet = SpreadsheetApp.openById(RESPONSE_SHEET_ID).getSheetByName(RESPONSE_TAB);
     if (!sheet) throw new Error('Response sheet unavailable.');
-    if (sheet.getLastColumn()<row.length) throw new Error('Response sheet schema mismatch.');
     sheet.appendRow(row);
     SpreadsheetApp.flush();
-  } finally {lock.releaseLock();}
-  return {ok:true,id:id.substring(0,8).toUpperCase()};
+  } finally {
+    lock.releaseLock();
+  }
+  return {ok:true, id:id.substring(0, 8).toUpperCase()};
 }
 
 function verifySheetAccess() {
-  const ss = SpreadsheetApp.openById(RESPONSE_SHEET_ID);
-  const sheet = ss.getSheetByName(RESPONSE_TAB);
+  var ss = SpreadsheetApp.openById(RESPONSE_SHEET_ID);
+  var sheet = ss.getSheetByName(RESPONSE_TAB);
   if (!sheet) throw new Error('Responses tab not found');
   console.log('Connected successfully!');
   console.log('Spreadsheet: ' + ss.getName());
   console.log('Worksheet: ' + sheet.getName());
+  console.log('Last row: ' + sheet.getLastRow());
+  console.log('Last column: ' + sheet.getLastColumn());
 }
