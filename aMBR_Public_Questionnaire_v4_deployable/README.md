@@ -6,7 +6,9 @@
 - `ambr_public_form_preview.html`: same user interface, usable offline, but **cannot submit**.
 - `question_banks.json`: 14 role-specific question banks, 8 prompts each (mostly optional); original 10 stakeholder categories are kept distinct where appropriate, and the wider social-media population adds scientists, caregivers, general public, etc.
 
-**The public link does not exist yet.** The script must be deployed from an aMBR-controlled Google account.
+Public web app (execute as the aMBR account, anyone can open it):
+
+https://script.google.com/macros/s/AKfycbyGPoxpnnK9zqBtJoUbqLSGVWB8i-a6h6enjga0e-IxUR8Umb-XfarkDGsr71zwBC7l7A/exec
 
 ## Deployment (authorized aMBR team account)
 1. Open https://script.google.com/ and create a new project (e.g. `aMBR — Public Customer Discovery Form`).

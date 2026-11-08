@@ -60,3 +60,12 @@ function submitResponse(data) {
   } finally {lock.releaseLock();}
   return {ok:true,id:id.substring(0,8).toUpperCase()};
 }
+
+function verifySheetAccess() {
+  const ss = SpreadsheetApp.openById(RESPONSE_SHEET_ID);
+  const sheet = ss.getSheetByName(RESPONSE_TAB);
+  if (!sheet) throw new Error('Responses tab not found');
+  console.log('Connected successfully!');
+  console.log('Spreadsheet: ' + ss.getName());
+  console.log('Worksheet: ' + sheet.getName());
+}
