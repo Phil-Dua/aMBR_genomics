@@ -6,9 +6,11 @@ Anyone with the link can open the form. The response spreadsheet stays private t
 
 ## Open the form
 
-https://script.google.com/macros/s/AKfycbyGPoxpnnK9zqBtJoUbqLSGVWB8i-a6h6enjga0e-IxUR8Umb-XfarkDGsr71zwBC7l7A/exec
+https://script.google.com/a/macros/wisc.edu/s/AKfycbyGPoxpnnK9zqBtJoUbqLSGVWB8i-a6h6enjga0e-IxUR8Umb-XfarkDGsr71zwBC7l7A/exec
 
-No Google account is required. The same link is on the repository home page.
+That is the link on the repository home page. No UW–Madison account is required to open the form.
+
+Do not replace it with `script.google.com/macros/s/...`. If the browser is signed into more than one Google account, Google rewrites that address to `/macros/u/0/` or `/macros/u/1/` and shows “Sorry, unable to open the file at this time.” The `wisc.edu` address above does not get rewritten.
 
 The deployment runs as `yduan47@wisc.edu` with **Who has access: Anyone**. The script writes the sheet. People opening the form do not need spreadsheet edit access, and they cannot open the spreadsheet from the form.
 

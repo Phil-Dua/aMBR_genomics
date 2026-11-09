@@ -2,7 +2,9 @@
 
 The interview form is a Google web app. Anyone with the link can open it. No UW–Madison account is required. The response spreadsheet stays private.
 
-**[Open the interview form](https://script.google.com/macros/s/AKfycbyGPoxpnnK9zqBtJoUbqLSGVWB8i-a6h6enjga0e-IxUR8Umb-XfarkDGsr71zwBC7l7A/exec)**
+**[Open the interview form](https://script.google.com/a/macros/wisc.edu/s/AKfycbyGPoxpnnK9zqBtJoUbqLSGVWB8i-a6h6enjga0e-IxUR8Umb-XfarkDGsr71zwBC7l7A/exec)**
+
+Use that address as written. A browser signed into more than one Google account rewrites `script.google.com/macros/s/...` into `/macros/u/0/` or `/macros/u/1/`, and Google Drive then says it cannot open the file.
 
 The team uses this page to record what an interviewee said. The interviewee does not fill it in. GitHub is the place to find the link. The form itself opens in Google, and saving writes one row to the private team spreadsheet. People using the form do not need access to that spreadsheet.
 
