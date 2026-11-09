@@ -81,7 +81,10 @@ input:focus,textarea:focus,select:focus{outline:2px solid #54c0b5;border-color:v
   var SEGMENTS = [['unspecified','Prefer not to specify'],['routine','Routine screening'],['surveillance','High-risk surveillance'],['diagnosed','Experienced a cancer diagnosis'],['caregiver','Supporting another person'],['other','Other']];
   var SOURCES = [['direct','Direct interview'],['linkedin','LinkedIn'],['email','Email'],['social','Social media'],['other','Other']];
   var app = document.getElementById('app');
-  var state = {step:0, role:'', usecase:'unsure', segment:'unspecified', source:'direct', selfRole:'', secondaryRole:'', answers:['','','',''], additional:'', ack:false};
+  function freshState(){
+    return {step:0, role:'', usecase:'unsure', segment:'unspecified', source:'direct', selfRole:'', secondaryRole:'', answers:['','','',''], additional:'', ack:false};
+  }
+  var state = freshState();
   var REAL = typeof google !== 'undefined' && google.script && google.script.run;
 
   function esc(s){
@@ -110,7 +113,7 @@ input:focus,textarea:focus,select:focus{outline:2px solid #54c0b5;border-color:v
     if (state.step === 0) roleScreen();
     else if (state.step === 1) notesScreen();
     else doneScreen();
-    window.scrollTo({top:0, behavior:'instant'});
+    window.scrollTo(0, 0);
   }
 
   function roleScreen(){
@@ -248,7 +251,12 @@ input:focus,textarea:focus,select:focus{outline:2px solid #54c0b5;border-color:v
         '<p class="lead" style="margin:10px auto">Confirmation ' + esc(state.confirmation || 'Saved') + '. Only the aMBR team can open the spreadsheet.</p>' +
         '<div class="actions" style="justify-content:center"><button class="btn alt" id="again" type="button">Record another interview</button></div>' +
       '</section>';
-    document.getElementById('again').addEventListener('click', function(){ location.reload(); });
+    document.getElementById('again').addEventListener('click', function(){
+      state = freshState();
+      var intro = document.getElementById('intro');
+      if (intro) intro.style.display = '';
+      render();
+    });
   }
 
   render();
